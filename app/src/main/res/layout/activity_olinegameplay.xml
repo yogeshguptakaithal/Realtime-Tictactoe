@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FF5722"
+    tools:context=".MainActivity">
+
+    <androidx.gridlayout.widget.GridLayout
+        android:id="@+id/gridLayoutt"
+        android:layout_width="409dp"
+        android:layout_height="409dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="161dp"
+        android:layout_marginEnd="1dp"
+        android:layout_marginBottom="161dp"
+        android:background="@drawable/board"
+        android:visibility="gone"
+        app:columnCount="3"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:rowCount="3">
+
+        <ImageView
+            android:id="@+id/imageView1"
+            android:layout_width="132dp"
+            android:layout_height="135dp"
+            android:onClick="drop"
+            android:tag="1"
+            android:visibility="gone"
+            app:layout_column="0"
+            app:layout_row="0" />
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="132dp"
+            android:layout_height="135dp"
+            android:onClick="drop"
+            android:tag="2"
+            android:visibility="gone"
+            app:layout_column="1"
+            app:layout_row="0" />
+
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="132dp"
+            android:layout_height="135dp"
+            android:onClick="drop"
+            android:tag="3"
+            android:visibility="gone"
+            app:layout_column="2"
+            app:layout_row="0" />
+
+        <ImageView
+            android:id="@+id/imageView4"
+            android:layout_width="132dp"
+            android:layout_height="135dp"
+            android:onClick="drop"
+            android:tag="4"
+            android:visibility="gone"
+            app:layout_column="0"
+            app:layout_row="1" />
+
+        <ImageView
+            android:id="@+id/imageView5"
+            android:layout_width="132dp"
+            android:layout_height="135dp"
+            android:onClick="drop"
+            android:tag="5"
+            android:visibility="gone"
+            app:layout_column="1"
+            app:layout_row="1" />
+
+        <ImageView
+            android:id="@+id/imageView6"
+            android:layout_width="132dp"
+            android:layout_height="135dp"
+            android:onClick="drop"
+            android:tag="6"
+            android:visibility="gone"
+            app:layout_column="2"
+            app:layout_row="1" />
+
+        <ImageView
+            android:id="@+id/imageView7"
+            android:layout_width="132dp"
+            android:layout_height="135dp"
+            android:onClick="drop"
+            android:tag="7"
+            android:visibility="gone"
+            app:layout_column="0"
+            app:layout_row="2" />
+
+        <ImageView
+            android:id="@+id/imageView8"
+            android:layout_width="132dp"
+            android:layout_height="135dp"
+            android:onClick="drop"
+            android:tag="8"
+            android:visibility="gone"
+            app:layout_column="1"
+            app:layout_row="2" />
+
+
+        <ImageView
+            android:id="@+id/imageView9"
+            android:layout_width="132dp"
+            android:layout_height="135dp"
+            android:onClick="drop"
+            android:tag="9"
+            android:visibility="gone"
+            app:layout_column="2"
+            app:layout_row="2" />
+
+    </androidx.gridlayout.widget.GridLayout>
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="213dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="137dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="1376dp"
+        android:layout_marginBottom="82dp"
+        android:text="TextView"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@+id/gridLayoutt"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.028"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="117dp"
+        android:layout_height="58dp"
+        android:layout_marginStart="138dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="138dp"
+        android:layout_marginBottom="63dp"
+        android:onClick="tryagain"
+        android:text="Play  Again"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/gridLayoutt" />
+
+    <Button
+        android:id="@+id/stbutton"
+        android:layout_width="338dp"
+        android:layout_height="57dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="270dp"
+        android:layout_marginEnd="36dp"
+        android:layout_marginBottom="96dp"
+        android:onClick="start"
+        android:text="START GAME"
+        android:visibility="visible"
+        app:layout_constraintBottom_toTopOf="@+id/button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/button"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <VideoView
+        android:id="@+id/videoView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
